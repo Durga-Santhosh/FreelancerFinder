@@ -1,113 +1,114 @@
-.client-projects-page{
-    display: flex;
-    justify-content: space-evenly;
-    margin-top: 5vh;
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+* {
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
 }
 
-.client-projects-header{
-
-    display: flex;
-    height: 8vh;
-    justify-content: space-between;
-    align-items: center;
-}
-.client-projects-header select{
-
-    width: 25vw;
+body {
+  margin: 0;
+  background-color: #f3f2ef;
 }
 
-.client-projects-list{
-
-    width: 95%;
-    height: 82vh;
-
-    overflow-y: scroll;
-
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-    border-radius: 0.7rem;
-    padding: 3vh 2vw;
-
-    display: flex;
-    flex-direction: column;
-
+.client-container {
+  max-width: 1100px;
+  margin: 40px auto;
+  padding: 0 20px;
 }
 
-.client-projects-list hr{
-
-    color: rgb(95, 96, 97);
+.client-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
 }
 
-.client-projects-list h3{
-
-
+.client-header h2 {
+  font-size: 1.8rem;
+  color: #1d1d1d;
 }
 
-.listed-project:hover{
-    background-color: #efefef58;
-    cursor: pointer;
-
+.filter-select {
+  padding: 8px 12px;
+  font-size: 1rem;
+  border-radius: 0.4rem;
+  border: 1px solid #ccc;
 }
 
-.listed-project h5{
-    font-size: 0.9rem;
-
+.client-projects {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
-
-.listed-project p{
-
-    font-size: 0.9rem;
+.project-card {
+  background-color: white;
+  padding: 20px;
+  border-radius: 0.6rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  transition: 0.3s ease;
+  cursor: pointer;
 }
 
-
-.listed-project-head{
-
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 3vh;
+.project-card:hover {
+  background-color: #f9f9f9;
 }
 
-.listed-project-head h3{
-    width: 80%;
-    margin: 0;
-    font-size: 1.4rem;
-    color: #227396b0;
+.project-card-head {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
 }
 
-.listed-project-head p{
-
-    margin: 0;
+.project-card-head h3 {
+  font-size: 1.25rem;
+  color: #0a66c2;
+  margin: 0;
 }
 
-.listed-project .skills{
-
-    display: flex;
-    gap: 10px;
+.project-card-head span {
+  font-size: 0.85rem;
+  color: #666;
 }
 
-.listed-project .skills h6{
-
-    font-size: 0.8rem;
-    font-weight: 400;
-    color: #ee4950;
-    border: 1px solid #ee4950;
-    padding: 5px 10px;
-    border-radius: 1rem;
+.project-desc {
+  font-size: 0.95rem;
+  color: #444;
+  margin: 10px 0;
+  line-height: 1.5;
 }
 
-.listed-project .bids-data{
-
-    display: flex;
-    gap: 30px;
-    margin-top: 3vh;
+.project-meta {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+  align-items: center;
 }
 
-.listed-project .bids-data p{
-
-    
+.budget {
+  font-weight: 600;
+  color: #2c2c2c;
 }
 
-.listed-project .bids-data h6{
+.status {
+  font-weight: 600;
+  padding: 5px 12px;
+  border-radius: 1rem;
+  font-size: 0.75rem;
+  text-transform: capitalize;
+}
 
-    
+.status-available {
+  background-color: #e9f5ff;
+  color: #0a66c2;
+}
+
+.status-assigned {
+  background-color: #fff3cd;
+  color: #856404;
+}
+
+.status-completed {
+  background-color: #d4edda;
+  color: #155724;
 }

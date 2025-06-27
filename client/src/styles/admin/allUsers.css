@@ -1,43 +1,53 @@
-.all-users-page{
-    padding: 4vh 2vw;
-
+.all-users-page {
+  padding: 2rem;
+  background-color: #f3f2ef;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.all-users-page h3{
-
-
+.all-users-page h3 {
+  font-size: 1.5rem;
+  color: #0a66c2;
+  margin-bottom: 1.5rem;
 }
 
-.all-users{
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-   
+.all-users {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
 }
 
-.user{
-
-    display: flex;
-    width: 70%;
-    justify-content: space-between;
-    border: 1px solid #ee460e5b;
-    padding: 2vh 1.5vw;
-    border-radius: 0.8rem;
+.user {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  background-color: #ffffff;
+  border-radius: 8px;
+  padding: 1.5rem 2rem;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.05);
+  border-left: 4px solid #0a66c2;
+  transition: box-shadow 0.3s ease;
 }
 
-.user span{
-
-
+.user:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
-.user span b{
-    margin: 0;
-    font-weight: 500;
-    color: rgb(22, 129, 129);
+.user span {
+  display: flex;
+  flex-direction: column;
+  min-width: 180px;
 }
 
-.user span p{
+.user span b {
+  font-size: 0.85rem;
+  color: #5e5e5e;
+  margin-bottom: 4px;
+}
 
-    margin: 0;
-    color: rgba(22, 95, 129, 0.728);
+.user span p {
+  font-size: 0.95rem;
+  color: #0a66c2;
+  font-weight: 500;
+  margin: 0;
+  word-break: break-word;
 }

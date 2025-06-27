@@ -1,35 +1,47 @@
-import React, { useContext } from 'react'
-import { GeneralContext } from '../context/GeneralContext';
+import React, { useContext } from "react";
+import { GeneralContext } from "../context/GeneralContext";
 
-const Login = ({setAuthType}) => {
+const Login = ({ setAuthType }) => {
+  const { setEmail, setPassword, login } = useContext(GeneralContext);
 
-  const {setEmail, setPassword, login} = useContext(GeneralContext);
-
-  const handleLogin = async (e) =>{
+  const handleLogin = async (e) => {
     e.preventDefault();
     await login();
-  }
+  };
 
   return (
     <form className="authForm">
-        <h2>Login</h2>
-        <div className="form-floating mb-3 authFormInputs">
-            
-          <label htmlFor="floatingInput">Email:</label>
-            <input type="email" className="form-control" id="floatingInput" placeholder="name@example.com" 
-                                                                  onChange={(e) => setEmail(e.target.value)} />
-        </div>
-            <div className="form-floating mb-3 authFormInputs">
+      <h2>Login</h2>
+      <div className="form-floating mb-3 authFormInputs">
+        <label htmlFor="floatingInput">Email</label>
+        <input
+          type="email"
+          className="form-control"
+          id="floatingInput"
+          placeholder="name@example.com"
+          onChange={(e) => setEmail(e.target.value)}
+        />
+      </div>
+      <div className="form-floating mb-3 authFormInputs">
+        <label htmlFor="floatingPassword">Password</label>
+        <input
+          type="password"
+          className="form-control"
+          id="floatingPassword"
+          placeholder="Password"
+          onChange={(e) => setPassword(e.target.value)}
+        />
+      </div>
+      <button type="submit" className="btn btn-primary" onClick={handleLogin}>
+        Sign in
+      </button>
 
-              <label htmlFor="floatingPassword">Password:</label>
-            <input type="password" className="form-control" id="floatingPassword" placeholder="Password" 
-                                                                  onChange={(e) => setPassword(e.target.value)} /> 
-        </div>
-        <button type="submit" className="btn btn-primary" onClick={handleLogin}>Sign in</button>
-
-        <p>Not registered? <span onClick={()=> setAuthType('register')}>Register</span></p>
+      <p>
+        Not registered?{" "}
+        <span onClick={() => setAuthType("register")}>Register</span>
+      </p>
     </form>
-  )
-}
+  );
+};
 
-export default Login
+export default Login;

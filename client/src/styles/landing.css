@@ -1,110 +1,102 @@
-.landing-page{
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
 
-    height: fit-content;
-    width: 100%;
-    margin: 0;
-    padding: 0;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
 }
 
-.landing-hero{
-
-    background: url('../images/background.jpg');
-    height: 100vh;
-    width: 100%;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+.landing-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background: #f3f2ef;
 }
 
-.landing-nav{
-    
-    display: flex;
-    justify-content: space-between;
-    height: 15vh;
-    padding: 0 2vw;
-    align-items: center;
+.landing-navbar {
+  height: 70px;
+  padding: 0 4%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
 }
 
-.landing-nav h3{
-
-    margin: 0;
-    font-size: 2rem;
-    color: rgb(255, 255, 255);
-    font-family: 'Kaushan Script', cursive;
+.logo {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #0a66c2;
 }
 
-.landing-nav button{
-
-    padding: 10px 30px;
-    font-size: 1rem;
-    font-weight: 600;
-    background-color: #7739e19c;
-    outline: none;
-    border: none;
-    color: #292929;
-    border-radius: 1.5rem;
-    font-family: 'Poppins', sans-serif;
-    cursor: pointer;
+.logo span {
+  color: #0056a3;
 }
 
-.landing-nav button:hover{
-
-    padding: 10px 30px;
-    font-size: 1rem;
-    background-color: #7739e17d;
-    border: 1.5px solid #da4a4a43;
-    color: #272525;
-
-    border-radius: 3rem;
-    font-family: 'Poppins', sans-serif;
-    cursor: pointer;
+.signin-btn {
+  padding: 10px 20px;
+  border: 1px solid #0a66c2;
+  background: transparent;
+  color: #0a66c2;
+  border-radius: 2rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
 
-.landing-hero-text{
-
-    width: 70%;
-    margin-left: 15%;
-    margin-top: 10vh;
-    text-align: center;
-    color: #ffffffee;
+.signin-btn:hover {
+  background-color: #0a66c2;
+  color: white;
 }
 
-.landing-hero-text h1{
-
-    font-size: 3.5rem;
-    font-family: 'Poppins', sans-serif;
-    margin: 0;
+.landing-hero {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 5%;
 }
 
-
-.landing-hero-text p{
-
-    font-family: 'Work Sans', sans-serif;
-    color: #ffffffb8;
+.landing-content {
+  max-width: 50%;
 }
 
-.landing-hero-text button{
-
-    margin-top: 20px;
-    padding: 10px 30px;
-    font-size: 1rem;
-    background-color: #f22832;
-    border: none;
-    color: #000000;
-    border-radius: 3rem;
-    font-family: 'Poppins', sans-serif;
-    cursor: pointer;
+.headline {
+  font-size: 3rem;
+  color: #1d1d1d;
+  margin-bottom: 20px;
+  font-weight: 700;
 }
 
-.landing-hero-text button:hover{
-
-    padding: 10px 30px;
-    font-size: 1rem;
-    background-color: #c5d0d821;
-    border: 3px solid #e1d5d567;
-    color: #e1d5d5c4;
-    border-radius: 3rem;
-    font-family: 'Poppins', sans-serif;
-    cursor: pointer;
+.subtext {
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 30px;
+  line-height: 1.6;
 }
 
+.cta-btn {
+  padding: 12px 30px;
+  font-size: 1rem;
+  background-color: #0a66c2;
+  color: white;
+  border: none;
+  border-radius: 2rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.cta-btn:hover {
+  background-color: #004182;
+}
+
+.landing-image {
+  width: 45%;
+  height: 70%;
+  background: url('../images/background.jpg') no-repeat center;
+  background-size: cover;
+  border-radius: 1rem;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}

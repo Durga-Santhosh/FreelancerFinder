@@ -1,249 +1,216 @@
-.project-data-page{
-    padding: 3vh 2vw;
-    display: flex;
-    justify-content: space-between;
+/* LinkedIn-Inspired Layout */
+
+.linkedin-project-page {
+  padding: 2rem;
+  background-color: #f3f2ef;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.project-data-container{
-    width: 60%;
-    text-align: left;
+.linkedin-project-main {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  flex-wrap: wrap;
 }
 
-
-.project-data{
-
-
+/* Left Side (Project Info) */
+.linkedin-project-info {
+  flex: 2;
+  background: #fff;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.08);
 }
 
-.project-data h3{
-
-    font-size: 1.5rem;
-    color: rgba(32, 102, 137, 0.826);
+.linkedin-project-info h2 {
+  font-size: 1.5rem;
+  color: #0a66c2;
+  margin-bottom: 0.5rem;
 }
 
-.project-data p{
-    font-size: 0.9rem;
+.linkedin-project-info p {
+  color: #444;
+  font-size: 0.95rem;
+  line-height: 1.5;
 }
 
-.project-data span {
-
+.linkedin-section {
+  margin-top: 1.5rem;
 }
 
-.project-data span h5{
-
-
+.linkedin-section h4 {
+  font-size: 1rem;
+  color: #222;
+  margin-bottom: 0.5rem;
 }
 
-.project-data span .required-skills{
-    display: flex;
-    gap: 10px;
+.linkedin-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
 }
 
-.project-data span .required-skills p{
-    color: #ee450e;
-    border: 1px solid #ee450e;
-    padding: 6px 12px;
-    border-radius: 1rem;
-    font-size: 0.7rem;
+.linkedin-tags span {
+  background-color: #e8f0fe;
+  color: #0a66c2;
+  padding: 0.4rem 0.8rem;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 500;
 }
 
-.project-data span h6{
-
+.linkedin-submission {
+  margin-top: 2rem;
+  border-top: 1px solid #ddd;
+  padding-top: 1.5rem;
 }
 
-.project-submissions-container{
-    margin-top: 5vh;
-    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
-    padding: 3vh 2vw;
-    border-radius: 0.7rem;
-    margin-bottom: 5vh;
+.linkedin-submission h3 {
+  color: #0a66c2;
+  margin-bottom: 1rem;
 }
 
-.project-submissions-container h4{
-    margin-bottom: 3vh;
-    color: #226691db;
+.linkedin-submission p {
+  font-size: 0.9rem;
+  color: #333;
+  margin-bottom: 0.5rem;
 }
 
-.project-submissions{
-
-
+.linkedin-submission a {
+  color: #0a66c2;
+  text-decoration: none;
+  word-break: break-all;
 }
 
-.project-submission{
-
-
+.linkedin-submission a:hover {
+  text-decoration: underline;
 }
 
-.project-submission h6{
-
-    
-}
-.project-submission h5{
-    margin: 0;
-    font-size: 1rem;
-}
-.project-submission span{
-    display: flex;
-    gap: 10px;
-    margin-bottom: 2vh;
-    align-items: center;
-}
-.project-submission span h5{
-    margin: 0;
-    font-size: 1rem;
-}
-.project-submission span a{
-
-    text-decoration: none;
-    font-size: 0.9rem;
-}
-.project-submission p{
-
-    font-size: 0.8rem;
-}
-.project-submission .submission-btns{
-    display: flex;
-    gap: 15px;
+.linkedin-buttons {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
 }
 
-.project-submission .submission-btns button{
-
-    width: 20%;
+.linkedin-buttons .approve,
+.linkedin-buttons .decline {
+  padding: 0.6rem 1.2rem;
+  font-size: 0.85rem;
+  border-radius: 999px;
+  border: none;
+  cursor: pointer;
 }
 
-.project-chat-container{
-    width: 35%;
-    height: 85vh;
-    border-radius: 0.7rem;
-    padding: 2vh 1.5vw;
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em, rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em, rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
+.linkedin-buttons .approve {
+  background-color: #0a66c2;
+  color: #fff;
 }
 
-.project-chat-container h4{
-    font-size: 1.2rem;
-    margin: 0;
+.linkedin-buttons .decline {
+  background-color: #d93025;
+  color: #fff;
 }
 
-.project-chat-container hr{
-
-
+.approved {
+  color: green;
+  font-weight: bold;
+  margin-top: 0.5rem;
 }
 
-.chat-body{
-
-    height: 95%;
-    
+/* Right Side (Chat Section) */
+.linkedin-chat-section {
+  flex: 1;
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 8px;
+  height: fit-content;
+  max-height: 85vh;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 0 8px rgba(0,0,0,0.08);
 }
 
-.chat-messages{
-
-    height: 55vh;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    overflow-y: scroll;
-    -ms-overflow-style: none; 
-    scrollbar-width: none;
-    padding-bottom: 4vh;
+.linkedin-chat-section h3 {
+  font-size: 1.2rem;
+  color: #333;
+  margin-bottom: 1rem;
 }
 
-.chat-messages::-webkit-scrollbar {
-    display: none;
-  }
-
-.chat-messages .my-message{
-    width: 100%;
-    text-align: right;
-    display: flex;
-    justify-content: end;
+.chat-body {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
-.chat-messages .my-message div{
-    color: #fff9f7;
-    background-color: #e75221e0 !important;
-    width: fit-content;
-    max-width: 80%;
-    padding: 5px 20px;
-    border-radius: 1rem;
-    text-align: justify;
+.chat-messages {
+  flex: 1;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+  padding-right: 4px;
+  scrollbar-width: thin;
 }
 
-
-.chat-messages .my-message p{
-    margin: 0;
-    font-size: 0.8rem;
+.chat-msg {
+  max-width: 80%;
+  padding: 0.7rem 1rem;
+  border-radius: 1rem;
+  font-size: 0.9rem;
+  line-height: 1.4;
+  word-wrap: break-word;
 }
 
-.chat-messages .my-message h6{
-    margin: 0;
-    font-size: 0.6rem;
-    font-weight: 400;
-    text-align: end;
+.chat-msg.mine {
+  align-self: flex-end;
+  background-color: #d7f1fb;
+  color: #000;
 }
 
-.chat-messages .received-message{
-
-    width: 100%;
-    text-align: left;
+.chat-msg.other {
+  align-self: flex-start;
+  background-color: #e5e5e5;
+  color: #000;
 }
 
-.chat-messages .received-message div{
-    color: #fff9f7;
-    background-color: #218ee7e0 !important;
-    width: fit-content;
-    max-width: 80%;
-    padding: 5px 20px;
-    border-radius: 1rem;
-    text-align: justify;
+.chat-msg span {
+  font-size: 0.7rem;
+  color: #888;
+  display: block;
+  margin-top: 0.2rem;
+  text-align: right;
 }
 
-.chat-messages .received-message h5{
-
-    margin: 0;
-    font-size: 1rem;
+.chat-input {
+  display: flex;
+  gap: 0.5rem;
 }
 
-.chat-messages .received-message p{
-
-    margin: 0;
-    font-size: 0.8rem;
+.chat-input input {
+  flex: 1;
+  padding: 0.6rem 1rem;
+  border-radius: 999px;
+  border: 1px solid #ccc;
+  font-size: 0.9rem;
 }
 
-.chat-messages .received-message h6{
-
-    margin: 0;
-    font-size: 0.6rem;
-    font-weight: 400;
-    text-align: start;
+.chat-input button {
+  background-color: #0a66c2;
+  color: white;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 999px;
+  font-weight: 500;
+  cursor: pointer;
 }
 
-.chat-input{
-
-    height: 10vh;
-    display: flex;
-    align-items: center;
+.chat-input button:hover {
+  background-color: #004182;
 }
 
-.chat-input input{
-    width: 75%;
-    height: 8vh;
-    border-radius: 2rem 0 0 2rem;
-    padding-left: 10px;
-    border: 1.5px solid #d4d4d4;
-}
-
-.chat-input button{
-    width: 25%;
-    height: 8vh;
-    border-radius: 0 2rem 2rem 0;
-    border: 1.5px solid #ee450e;
-    color: #ee450e;
-    background-color: #6c6a6900;
-    font-weight: 500;
-}
-
-.chat-input button:hover{
-    border: 1.5px solid #ee450e;
-    color: aliceblue;
-    background-color: #ee450e;
+.info-text {
+  color: #888;
+  font-size: 0.85rem;
+  margin-top: 1rem;
 }

@@ -1,116 +1,128 @@
-.client-applications-page{
-    padding: 2vh 2vw;
-
+.linkedin-applications {
+  max-width: 1100px;
+  margin: 40px auto;
+  padding: 0 20px;
+  font-family: 'Inter', sans-serif;
 }
 
-.client-applications-page span{
-    display: flex;
-    justify-content: space-between;
+.applications-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
 }
 
-
-.client-applications-page span h3{
-
-
+.applications-header h2 {
+  color: #0a66c2;
+  font-weight: 600;
 }
 
-
-.client-applications-page span select{
-    width: 50%;
-
+.applications-header select {
+  padding: 8px 12px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  min-width: 200px;
+  background-color: white;
 }
 
-.client-applications-body{
-    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
-    height: 76vh;
-    border-radius: 0.7rem;
-    margin-top: 2vh;
-    padding-top: 2vh;
-    overflow-y: scroll;
-}   
-.client-application{
-    padding: 2vh 2vw;
+.applications-list {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+  padding: 20px;
+  max-height: 70vh;
+  overflow-y: auto;
 }
 
-.client-application:hover{
-    background-color: rgba(12, 105, 148, 0.071);
+.application-card {
+  margin-bottom: 30px;
 }
 
-.client-application-body{
-    display: flex;
-    justify-content: space-between;
+.application-card-top {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
 }
 
-.client-application hr{
-    height: 2px;
-    background-color: rgba(84, 86, 86, 0.377);
-    width: 100%;
-    margin-bottom: 0;
+.section-left,
+.section-right {
+  flex: 1;
 }
 
-.vertical-line{
-    width: 1px;
-    background-color: rgba(110, 109, 109, 0.233);
-    height: inherit;
+.section-left h4 {
+  color: #004182;
+  margin-bottom: 8px;
 }
 
-.client-application-half{
-
-    width: 48%;
+.section-left p,
+.section-right p {
+  color: #4f4f4f;
+  font-size: 0.9rem;
 }
 
-.client-application-half h4{
-    font-size: 1.2rem;
-    color: rgba(26, 83, 121, 0.646);
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 10px 0;
 }
 
-.client-application-half p{
-    font-size: 0.8rem;
+.tags span {
+  background-color: #edf3f8;
+  color: #0a66c2;
+  font-size: 0.75rem;
+  padding: 5px 10px;
+  border-radius: 999px;
+  border: 1px solid #cbd6e2;
 }
 
-.client-application-half span{
-    display: flex;
-    flex-direction: column;
+.budget {
+  font-weight: 600;
+  color: #333;
+  margin-top: 5px;
 }
 
-.client-application-half span h5{
-    font-size: 1.1rem;
-    color: rgba(9, 55, 86, 0.877);
+.action-buttons {
+  display: flex;
+  gap: 10px;
+  margin-top: 15px;
 }
 
-.client-application-half span p{
-
+button.approve,
+button.decline {
+  padding: 8px 14px;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
 }
 
-.client-application-half span .application-skills{
-    display: flex;
-    gap: 10px;
+button.approve {
+  background-color: #0a66c2;
+  color: white;
 }
 
-
-.client-application-half span .application-skills p{
-
-    color: #ee4950;
-    border: 1px solid #ee4950;
-    padding: 5px 10px;
-    border-radius: 1rem;
-    font-size: 0.6rem;
+button.approve:hover {
+  background-color: #004182;
 }
 
-.client-application-half h6{
-
-    font-size: 0.9rem;
+button.decline {
+  background-color: #d93025;
+  color: white;
 }
 
-.client-application-half h6 b{
-
-    color: rgb(103, 104, 103);
+button.decline:hover {
+  background-color: #b1271b;
 }
 
-.approve-btns{
-    display: flex;
-    gap: 20px;
+.status {
+  font-weight: 600;
+  color: #5f6368;
+  margin-top: 10px;
 }
-.approve-btns button{
-    width: 10vw;
+
+hr {
+  border: none;
+  border-top: 1px solid #e0e0e0;
+  margin-top: 20px;
 }

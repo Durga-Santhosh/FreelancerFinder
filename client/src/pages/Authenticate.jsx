@@ -16,7 +16,7 @@ const Authenticate = () => {
     <div className="AuthenticatePage">
 
         <div className="auth-navbar">
-          <h3 onClick={()=> navigate('/')} >SB Works</h3>
+          <h3 onClick={()=> navigate('/')} >Job Hunt</h3>
           <p onClick={()=> navigate('/')} >Home</p>
         </div>
 

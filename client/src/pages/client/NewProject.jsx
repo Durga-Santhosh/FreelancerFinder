@@ -1,72 +1,81 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
 import axios from 'axios';
-import {useNavigate} from 'react-router-dom';
-import '../../styles/client/newProject.css'
-
+import { useNavigate } from 'react-router-dom';
+import '../../styles/client/newProject.css';
+import { ToastContainer, toast } from 'react-toastify';
 
 const NewProject = () => {
+  const [title, setTitle] = useState('');
+  const [description, setDescription] = useState('');
+  const [budget, setBudget] = useState(0);
+  const [skills, setSkills] = useState('');
+  const navigate = useNavigate();
 
-    const [title, setTitle] = useState('');
-    const [description, setDescription] = useState('');
-    const [budget, setBudget] = useState(0);
-    const [skills, setSkills] = useState('');
-
-    const navigate = useNavigate();
-
-    const handleSubmit = async() =>{
-      await axios.post("http://localhost:6001/new-project", {title, description, budget, skills, clientId: localStorage.getItem('userId'),  clientName: localStorage.getItem('username'),  clientEmail: localStorage.getItem('email')}).then(
-        (response)=>{
-            alert("new project added!!");
-            setTitle('');
-            setDescription('');
-            setBudget(0);
-            setSkills('');
-            navigate('/client');
-        }
-      ).catch((err)=>{
-        alert("operation failed!!");
-      })
+  const handleSubmit = async () => {
+    try {
+      await axios.post("http://localhost:6001/new-project", {
+        title,
+        description,
+        budget,
+        skills,
+        clientId: localStorage.getItem('userId'),
+        clientName: localStorage.getItem('username'),
+        clientEmail: localStorage.getItem('email'),
+      });
+      toast.success("Project posted successfully!");
+      navigate('/client');
+    } catch (err) {
+      toast.error(err.response.data.message || "Failed to post project");
     }
+  };
 
   return (
-    <div className="new-project-page">
+    <div className="linkedin-new-project">
+      <div className="form-card">
+        <h2>Post a New Project</h2>
 
-          <h3>Post new project</h3>
+        <label>Project Title</label>
+        <input
+          type="text"
+          placeholder="e.g. Build a responsive portfolio website"
+          value={title}
+          onChange={(e) => setTitle(e.target.value)}
+        />
 
-          <div className="new-project-form">
+        <label>Description</label>
+        <textarea
+          rows="6"
+          placeholder="Describe your project details and expectations..."
+          value={description}
+          onChange={(e) => setDescription(e.target.value)}
+        ></textarea>
 
-              <div className="form-floating">
-
-                <label htmlFor="floatingPassword">Project title :</label>
-                <input type="text" className="form-control mb-3" id="floatingPassword" placeholder="Project title " onChange={(e)=>setTitle(e.target.value)} />
-              </div>
-
-              <div className="form-floating">
-
-                <label htmlFor="floatingPassword">Description:</label>
-                <textarea type="text" className="form-control mb-3" id="floatingPassword" placeholder="Description"  onChange={(e)=>setDescription(e.target.value)}/>
-              </div>
-
-              <span>
-                <div >
-
-                  <label htmlFor="floatingPassword">Budget (in &#8377;)</label>
-                  <input type="number" className="form-control mb-3" id="floatingPassword" placeholder="Budget" onChange={(e)=>setBudget(e.target.value)} />
-                </div>
-
-                <div>
-
-                  <label htmlFor="floatingPassword">Required skills (seperate each with ,)</label>
-                  <input type="text" className="form-control mb-3" id="floatingPassword" placeholder="Skils" onChange={(e)=>setSkills(e.target.value)} />
-                </div>
-              </span>
-
-              <button className='btn' onClick={handleSubmit} >Submit</button>
-
+        <div className="two-column">
+          <div>
+            <label>Budget (₹)</label>
+            <input
+              type="number"
+              placeholder="e.g. 5000"
+              value={budget}
+              onChange={(e) => setBudget(e.target.value)}
+            />
           </div>
 
-    </div>
-  )
-}
+          <div>
+            <label>Required Skills</label>
+            <input
+              type="text"
+              placeholder="e.g. React, Node.js, MongoDB"
+              value={skills}
+              onChange={(e) => setSkills(e.target.value)}
+            />
+          </div>
+        </div>
 
-export default NewProject
+        <button onClick={handleSubmit}>Post Project</button>
+      </div>
+    </div>
+  );
+};
+
+export default NewProject;

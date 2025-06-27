@@ -44,6 +44,10 @@ mongoose.connect('mongodb+srv://dsanthosh0710:2K2FIZOkKOA5Z8sx@cluster0.h4zzlht.
         try{
     
             const {username, email, password, usertype} = req.body;
+
+            if(!username|| !email || !password ||!usertype){
+                return res.status(400).json({message: "Please fill all the details"})
+            }
     
             const salt = await bcrypt.genSalt();
             const passwordHash = await bcrypt.hash(password, salt);
@@ -75,11 +79,16 @@ mongoose.connect('mongodb+srv://dsanthosh0710:2K2FIZOkKOA5Z8sx@cluster0.h4zzlht.
     app.post('/login', async (req, res) =>{
         try{
             const {email, password} = req.body;
+            if(!email|| !password){
+                return res.status(400).json({message: "Please fill all the details"})
+            }
+
+
             const user = await User.findOne({email:email});
             if(!user) return res.status(400).json({msg: "User does not exist"});
     
             const isMatch = await bcrypt.compare(password, user.password);
-            if(!isMatch) return res.status(400).json({msg: "Invalid credentials"});
+            if(!isMatch) return res.status(400).json({msg: "Invalid Credentials"});
                  
             res.status(200).json(user);
         }catch(err){
@@ -163,10 +172,14 @@ mongoose.connect('mongodb+srv://dsanthosh0710:2K2FIZOkKOA5Z8sx@cluster0.h4zzlht.
                 clientEmail,
                 postedDate: new Date()
             })
+            if(!title || !description || !budget || !skills || !clientId || !clientName || !clientEmail){
+                return res.status(400).json({message: "Please fill all the details"});  
+            }
+
             await newProject.save();
             res.status(200).json({message: "Project added"});
         }catch(err){
-            res.status(500).json({error: err.message});
+            res.status(500).json({message: err.message});
         }
     })
 

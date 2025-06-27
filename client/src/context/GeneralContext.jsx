@@ -2,6 +2,7 @@ import React, { createContext, useEffect, useState } from 'react';
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import socketIoClient from 'socket.io-client';
+import { ToastContainer, toast } from 'react-toastify';
 
 export const GeneralContext = createContext();
 
@@ -33,19 +34,24 @@ const GeneralContextProvider = ({children}) => {
             localStorage.setItem('username', res.data.username);
             localStorage.setItem('email', res.data.email);
             if(res.data.usertype === 'freelancer'){
+                toast.success("Freelancer Login Successful");
                 navigate('/freelancer');
             } else if(res.data.usertype === 'client'){
+              toast.success("Client Login  Successful");
               navigate('/client');
             } else if(res.data.usertype === 'admin'){
+              toast.success("Admin Login  Successful");
                 navigate('/admin');
             }
           }).catch((err) =>{
-            alert("login failed!!");
-            console.log(err);
+            
+            toast.error(err.response.data.message);
+            
           });
           
         }catch(err){
-          console.log(err);
+          
+          toast.error(err.response.data.message);
         }
       }
       
@@ -61,18 +67,22 @@ const GeneralContextProvider = ({children}) => {
             localStorage.setItem('email', res.data.email);
 
             if(res.data.usertype === 'freelancer'){
+              toast.success("Freelancer Registration Successful");
               navigate('/freelancer');
           } else if(res.data.usertype === 'client'){
+              toast.success("Client Registration Successful");
             navigate('/client');
           } else if(res.data.usertype === 'admin'){
+              toast.success("Admin Registration Successful");
               navigate('/admin');
           }
  
         }).catch((err) =>{
-            alert("registration failed!!");
+            toast.error(err.response.data.message)
             console.log(err);
         });
     }catch(err){
+        toast.error(err.response.data.message);
         console.log(err);
     }
   }
@@ -86,13 +96,16 @@ const GeneralContextProvider = ({children}) => {
         localStorage.removeItem(key);
       }
     }
-    
+    toast.success("Logout Successfully")
     navigate('/');
   }
 
 
   return (
+    <>
+    <ToastContainer position='top-center'/>
     <GeneralContext.Provider value={{socket, login, register, logout, username, setUsername, email, setEmail, password, setPassword, usertype, setUsertype}} >{children}</GeneralContext.Provider>
+    </>
   )
 }
 

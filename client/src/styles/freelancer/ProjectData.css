@@ -1,233 +1,174 @@
-.project-data-page{
-    padding: 3vh 2vw;
-    display: flex;
-    justify-content: space-between;
+/* LinkedIn-style CSS for ProjectData.css */
+
+.project-data-page {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  background-color: #f3f2ef;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.project-data-container{
-    width: 60%;
-    text-align: left;
+.project-data-container {
+  background-color: #ffffff;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  margin-bottom: 2rem;
 }
 
-
-.project-data{
-
-
+.project-data h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #1d2226;
 }
 
-.project-data h3{
-
-    font-size: 1.5rem;
-    color: rgba(32, 102, 137, 0.826);
+.project-data p {
+  font-size: 1rem;
+  color: #434649;
+  margin-bottom: 1rem;
 }
 
-.project-data p{
-    font-size: 0.9rem;
+.project-data span h5 {
+  font-size: 1rem;
+  color: #2f81f7;
+  margin-top: 1rem;
 }
 
-.project-data span {
-
+.project-data .required-skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
 }
 
-.project-data span h5{
-
-
+.project-data .required-skills p {
+  background-color: #e1ecf4;
+  color: #39739d;
+  border-radius: 1rem;
+  padding: 0.4rem 0.8rem;
+  font-size: 0.85rem;
+  font-weight: 500;
 }
 
-.project-data span .required-skills{
-    display: flex;
-    gap: 10px;
+.project-data h6 {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #1d2226;
 }
 
-.project-data span .required-skills p{
-    color: #ee450e;
-    border: 1px solid #ee450e;
-    padding: 6px 12px;
-    border-radius: 1rem;
-    font-size: 0.7rem;
+.project-form-body {
+  margin-top: 2rem;
+  border-top: 1px solid #d6d6d6;
+  padding-top: 1.5rem;
 }
 
-.project-data span h6{
-
+.project-form-body h4 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: #1d2226;
 }
 
-
-
-
-.project-form-body{
-
-    margin-top: 5vh;
-    box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;
-    padding: 3vh 2vw;
-    border-radius: 0.7rem;
+.project-form-body input,
+.project-form-body textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #d1d1d1;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  margin-bottom: 1rem;
 }
 
-.project-form-body h4{
-
-
+.project-form-body button {
+  background-color: #0a66c2;
+  color: #ffffff;
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 0.4rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
-.project-form-body span{
-
-    display: grid;
-    width: 100%;
-    grid-template-columns: 49% 49%;
-    justify-content: space-between;
+.project-form-body button:hover {
+  background-color: #004182;
 }
 
-.project-form-body span input{
-
-    width: 100%;
-}
-.project-form-body input{
-    width: 100%;
-
-}
-
-.project-form-body textarea{
-
-    min-height: 20vh;
+.project-chat-container {
+  background-color: #ffffff;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  margin-bottom: 2rem;
 }
 
-.project-form-body button{
-
-
+.project-chat-container h4 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: #1d2226;
 }
 
-
-.project-chat-container{
-    width: 35%;
-    height: 85vh;
-    border-radius: 0.7rem;
-    padding: 2vh 1.5vw;
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em, rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em, rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
+.chat-body {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
 
-.project-chat-container h4{
-    font-size: 1.2rem;
-    margin: 0;
+.chat-messages {
+  max-height: 300px;
+  overflow-y: auto;
+  padding-right: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
 }
 
-.project-chat-container hr{
-
-
+.my-message,
+.received-message {
+  padding: 0.75rem 1rem;
+  border-radius: 1rem;
+  max-width: 70%;
+  font-size: 0.95rem;
+  line-height: 1.4;
+  word-wrap: break-word;
 }
 
-.chat-body{
-
-    height: 95%;
-    
+.my-message {
+  align-self: flex-end;
+  background-color: #daf0ff;
+  color: #1d2226;
 }
 
-.chat-messages{
-
-    height: 55vh;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    overflow-y: scroll;
-    -ms-overflow-style: none; 
-    scrollbar-width: none;
-    padding-bottom: 4vh;
+.received-message {
+  align-self: flex-start;
+  background-color: #f0f2f5;
+  color: #1d2226;
 }
 
-.chat-messages::-webkit-scrollbar {
-    display: none;
-  }
-
-.chat-messages .my-message{
-    width: 100%;
-    text-align: right;
-    display: flex;
-    justify-content: end;
+.chat-input {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  margin-top: 1rem;
 }
 
-.chat-messages .my-message div{
-    color: #fff9f7;
-    background-color: #e75221e0 !important;
-    width: fit-content;
-    max-width: 80%;
-    padding: 5px 20px;
-    border-radius: 1rem;
-    text-align: justify;
+.chat-input input {
+  flex: 1;
+  padding: 0.7rem;
+  border-radius: 0.4rem;
+  border: 1px solid #ccc;
+  font-size: 1rem;
 }
 
-
-.chat-messages .my-message p{
-    margin: 0;
-    font-size: 0.8rem;
+.chat-input button {
+  background-color: #0a66c2;
+  color: white;
+  padding: 0.6rem 1rem;
+  border: none;
+  border-radius: 0.4rem;
+  cursor: pointer;
 }
 
-.chat-messages .my-message h6{
-    margin: 0;
-    font-size: 0.6rem;
-    font-weight: 400;
-    text-align: end;
-}
-
-.chat-messages .received-message{
-
-    width: 100%;
-    text-align: left;
-}
-
-.chat-messages .received-message div{
-    color: #fff9f7;
-    background-color: #218ee7e0 !important;
-    width: fit-content;
-    max-width: 80%;
-    padding: 5px 20px;
-    border-radius: 1rem;
-    text-align: justify;
-}
-
-.chat-messages .received-message h5{
-
-    margin: 0;
-    font-size: 1rem;
-}
-
-.chat-messages .received-message p{
-
-    margin: 0;
-    font-size: 0.8rem;
-}
-
-.chat-messages .received-message h6{
-
-    margin: 0;
-    font-size: 0.6rem;
-    font-weight: 400;
-    text-align: start;
-}
-
-.chat-input{
-
-    height: 10vh;
-    display: flex;
-    align-items: center;
-}
-
-.chat-input input{
-    width: 75%;
-    height: 8vh;
-    border-radius: 2rem 0 0 2rem;
-    padding-left: 10px;
-    border: 1.5px solid #d4d4d4;
-}
-
-.chat-input button{
-    width: 25%;
-    height: 8vh;
-    border-radius: 0 2rem 2rem 0;
-    border: 1.5px solid #ee450e;
-    color: #ee450e;
-    background-color: #6c6a6900;
-    font-weight: 500;
-}
-
-.chat-input button:hover{
-    border: 1.5px solid #ee450e;
-    color: aliceblue;
-    background-color: #ee450e;
+.chat-input button:hover {
+  background-color: #004182;
 }

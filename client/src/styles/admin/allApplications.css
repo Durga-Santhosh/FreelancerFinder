@@ -1,91 +1,113 @@
-.user-applications-page{
-    padding: 2vh 2vw;
-
+.user-applications-page {
+  padding: 2rem;
+  background-color: #f3f2ef;
+  min-height: 100vh;
 }
 
-.user-applications-page h3{
-
-
+.section-title {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #2d2d2d;
+  margin-bottom: 1.5rem;
 }
 
-.user-applications-body{
-    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
-    height: 76vh;
-    border-radius: 0.7rem;
-    margin-top: 2vh;
-    padding-top: 2vh;
-    overflow-y: scroll;
-}   
-.user-application{
-    padding: 2vh 2vw;
-    cursor: pointer;
+.user-applications-body {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
 }
 
-.user-application:hover{
-    background-color: rgba(12, 105, 148, 0.071);
+.application-card {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.07);
+  padding: 1.5rem;
+  transition: box-shadow 0.3s ease;
 }
 
-.user-application-body{
+.application-card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+.application-header h3 {
+  font-size: 1.2rem;
+  color: #0a66c2;
+  margin-bottom: 0.5rem;
+}
+
+.application-header p {
+  font-size: 0.95rem;
+  color: #555;
+  margin-bottom: 1rem;
+}
+
+.application-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.application-section {
+  flex: 1;
+  min-width: 280px;
+}
+
+.application-section h4 {
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.application-section p {
+  font-size: 0.9rem;
+  color: #444;
+  margin: 0.3rem 0;
+}
+
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 0.5rem;
+}
+
+.skill-tag {
+  padding: 5px 10px;
+  font-size: 0.75rem;
+  background-color: #eaf1fb;
+  color: #0a66c2;
+  border-radius: 20px;
+  border: 1px solid #c3d9f1;
+}
+
+.skill-tag.alt {
+  background-color: #f3f0ff;
+  color: #5e4b8b;
+  border: 1px solid #ccc3ea;
+}
+
+.status-tag {
+  font-weight: 600;
+  color: #555;
+}
+
+.status-tag.accepted {
+  color: green;
+}
+.auth-navbar{
+    position: fixed;
+    top: 0;
+    width: 100%;
     display: flex;
     justify-content: space-between;
+    background-color: #c3d9f1;
+    height: 50px;
+    align-items: center;
 }
-
-.user-application hr{
-    height: 2px;
-    background-color: rgba(84, 86, 86, 0.377);
-    width: 100%;
-    margin-bottom: 0;
+.auth-navbar h3{
+    font-size: 1.8rem;
+    margin-left: 30px;
 }
-
-.vertical-line{
-    width: 1px;
-    background-color: rgba(110, 109, 109, 0.233);
-    height: inherit;
-}
-
-.user-application-half{
-
-    width: 48%;
-}
-
-.user-application-half h4{
-    font-size: 1.2rem;
-    color: rgba(26, 83, 121, 0.646);
-}
-
-.user-application-half p{
-    font-size: 0.8rem;
-}
-
-.user-application-half span{
-
-}
-
-.user-application-half span h5{
-    font-size: 1.1rem;
-    color: rgba(9, 55, 86, 0.877);
-}
-
-.user-application-half span p{
-
-}
-
-.user-application-half span .application-skills{
-    display: flex;
-    gap: 10px;
-}
-
-
-.user-application-half span .application-skills p{
-
-    color: #ee4950;
-    border: 1px solid #ee4950;
-    padding: 5px 10px;
-    border-radius: 1rem;
-    font-size: 0.6rem;
-}
-
-.user-application-half h6{
-
-    font-size: 0.9rem;
+.auth-navbar p{
+    font-size: 1rem;
+    margin-right: 50px;
 }
