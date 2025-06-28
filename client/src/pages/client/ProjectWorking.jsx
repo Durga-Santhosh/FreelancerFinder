@@ -3,6 +3,7 @@ import '../../styles/client/ProjectWorking.css';
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
 import { GeneralContext } from '../../context/GeneralContext';
+import { ToastContainer, toast } from 'react-toastify';
 
 const ProjectWorking = () => {
   const { socket } = useContext(GeneralContext);
@@ -40,7 +41,7 @@ const ProjectWorking = () => {
     try {
       await axios.get(`http://localhost:6001/approve-submission/${id}`);
       fetchProject(id);
-      alert("Submission approved!!");
+      toast.success("Submission approved successfully!");
     } catch (err) {
       console.error(err);
     }
@@ -50,7 +51,7 @@ const ProjectWorking = () => {
     try {
       await axios.get(`http://localhost:6001/reject-submission/${id}`);
       fetchProject(id);
-      alert("Submission rejected!!");
+      toast.success("Submission rejected successfully!");
     } catch (err) {
       console.error(err);
     }

@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import '../../styles/freelancer/freelancer.css'
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
+import { toast } from 'react-toastify';
 
 
 const Freelancer = () => {
@@ -45,7 +46,7 @@ const Freelancer = () => {
     axios.post(`http://localhost:6001/update-freelancer`, {freelancerId, updateSkills: updateSkills, description: updateDescription}).then(
         (response)=>{
           fetchUserData();
-          alert("User data updated")
+          toast.success("Freelancer data updated successfully");
         }
       )
   }

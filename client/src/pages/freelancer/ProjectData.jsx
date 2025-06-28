@@ -94,9 +94,9 @@ const ProjectData = () => {
       setProjectLink('');
       setManualLink('');
       setSubmissionDescription('');
-      alert("Submission successful!!");
+      toast.success("Project submitted successfully!");
     } catch (err) {
-      alert("Submission failed!! Try again!");
+      toast.error("Project submission failed! Try again.");
     }
   };
 
@@ -182,6 +182,7 @@ const ProjectData = () => {
               ) : (
                 <>
                   <div className="form-floating">
+                    <label>Project link</label>
                     <input
                       type="text"
                       className="form-control mb-3"
@@ -189,9 +190,9 @@ const ProjectData = () => {
                       value={projectLink}
                       onChange={(e) => setProjectLink(e.target.value)}
                     />
-                    <label>Project link</label>
                   </div>
                   <div className="form-floating">
+                    <label>Manual link</label>
                     <input
                       type="text"
                       className="form-control mb-3"
@@ -199,16 +200,15 @@ const ProjectData = () => {
                       value={manualLink}
                       onChange={(e) => setManualLink(e.target.value)}
                     />
-                    <label>Manual link</label>
                   </div>
                   <div className="form-floating">
+                    <label>Describe your work</label>
                     <textarea
                       className="form-control mb-3"
                       placeholder="Describe your work"
                       value={submissionDescription}
                       onChange={(e) => setSubmissionDescription(e.target.value)}
                     />
-                    <label>Describe your work</label>
                   </div>
                   {project.submission ? (
                     <button className="btn btn-secondary" disabled>Already submitted</button>
